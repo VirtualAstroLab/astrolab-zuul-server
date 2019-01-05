@@ -1,0 +1,11 @@
+FROM openjdk:8u121-jre-alpine 
+
+MAINTAINER astrolab.web
+
+ADD maven/astrolab-zuul-server-0.0.1-SNAPSHOT.jar /opt/spring-cloud/lib/astrolab-zuul-server.jar
+
+ENTRYPOINT ["/usr/bin/java"]
+
+CMD ["-jar", "/opt/spring-cloud/lib/astrolab-zuul-server.jar"]
+
+EXPOSE 8080
